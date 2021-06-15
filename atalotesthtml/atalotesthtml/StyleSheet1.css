@@ -1,0 +1,38 @@
+﻿
+container {
+ margin: auto;
+}
+
+body div {
+    border: 1px solid #000000;
+    margin: 0px auto;
+    text-align: center;
+}
+
+img {
+    margin-top: 20px;
+    width: 100%;
+}
+
+#div22 {
+    height: 300px;
+}
+
+#div221 {
+    background-color: #da2626;
+}
+
+#div222 {
+    
+    background-color: #FF9800;
+}
+
+#div21 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#divafrica {
+    width: 100%
+}

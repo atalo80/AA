@@ -1,0 +1,44 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+
+
+
+    <script src="cars.js"></script>
+    <script>
+        function init() {
+            if (localStorage.getItem("previousCar") != null) {
+                document.getElementById("ph").innerHTML = "<p>previosly you selected " + localStorage.getItem("previousCar");
+            }
+            var selectList = document.getElementById("carsDDL");
+            var option = document.createElement("option");
+            option.value = -1;
+            option.text = "select a car";
+            selectList.appendChild(option);
+            //Create and append the options
+            for (var i = 0; i < cars.length; i++) {
+                option = document.createElement("option");
+                option.value = cars[i].name + " " + cars[i].year;
+                option.text = cars[i].name + " " + cars[i].year;
+                selectList.appendChild(option);
+            }
+            selectList.onchange=function () {
+                var selectList = document.getElementById("carsDDL");
+                if (selectList.value != -1)
+                    localStorage.setItem("previousCar", selectList.value);
+            }
+        }
+    </script>
+</head>
+<body onload="init()">
+
+    <div id="ph">
+
+
+    </div>
+
+    <select id="carsDDL"></select>
+
+</body>
+</html>
